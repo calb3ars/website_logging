@@ -51,7 +51,12 @@ def sort_to_set(array, set)
     end
   end
 
-  results.sort_by { |k, v| k}
+  # results.sort_by { |k, v| k}
+  results.map do |k, v|
+    results[k] = v.sort{|a, b| b[1] <=> a[1] }
+  end
+
+  results.sort_by {|k, v| k }
 end
 
 # load "script.rb"
