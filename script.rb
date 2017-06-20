@@ -74,10 +74,3 @@ def print_site(array)
     p "#{site[0]} #{site[1]}"
   end
 end
-
-# load "script.rb"
-# a = parse('input.txt')
-# s = time_set(a)
-# r = sort_to_set(a, s)
-#   print_output(r)
-# print_results(r)
