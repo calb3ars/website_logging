@@ -59,8 +59,25 @@ def sort_to_set(array, set)
   results.sort_by {|k, v| k }
 end
 
+def print_output(array)
+  array.each do |el|
+    month = el[0].month.to_s.rjust(2, '0')
+    day = el[0].day.to_s.rjust(2, '0')
+    year = el[0].year
+    p "#{month}/#{day}/#{year} GMT"
+    print_site(el[1])
+  end
+end
+
+def print_site(array)
+  array.each do |site|
+    p "#{site[0]} #{site[1]}"
+  end
+end
+
 # load "script.rb"
 # a = parse('input.txt')
 # s = time_set(a)
 # r = sort_to_set(a, s)
+#   print_output(r)
 # print_results(r)
